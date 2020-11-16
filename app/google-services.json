@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "46606944114",
+    "firebase_url": "https://handa-ce9db.firebaseio.com",
+    "project_id": "handa-ce9db",
+    "storage_bucket": "handa-ce9db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46606944114:android:e17323f239e4319f33ffeb",
+        "android_client_info": {
+          "package_name": "com.example.handa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46606944114-pi5mnssgl4ucorrtb0p7cmptvccekou7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.handa",
+            "certificate_hash": "3b0dd944ebbc6351eefed46cd7dc1c446d828cd3"
+          }
+        },
+        {
+          "client_id": "46606944114-5lluo5do9nqqs0e1f3l7luiscrcr6ur8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBubXW6v-hWUePpMXy28lC8QHbLjrFLgIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46606944114-5lluo5do9nqqs0e1f3l7luiscrcr6ur8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
