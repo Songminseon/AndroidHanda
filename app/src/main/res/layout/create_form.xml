@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.handa.Certify_mainFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gameOverConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
+        <Button
+            android:id="@+id/tryAgainButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
->>>>>>> e52e9b207e3f4b0bd101059d2ff2e36241b609ac
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginBottom="244dp"
+            android:text="생성하기"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
