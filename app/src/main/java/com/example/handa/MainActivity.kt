@@ -2,61 +2,65 @@ package com.example.handa
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.MenuItem
 
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),BottomNavigationView.OnNavigationItemSelectedListener {
 
     //잠시 니 코드좀 지울게용
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-    }
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
 
-    private val navigationSelection = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-
-        when(item.itemId){
+        when (item.itemId) {
             R.id.go_challenge_main -> {
-                System.out.println("1111111111")
-                replaceFragment(Challenge_mainFragment())
-                return@OnNavigationItemSelectedListener true
+                val fragmentA = Challenge_mainFragment()
+                transaction.replace(R.id.fragment_container, fragmentA)
+                transaction.commit()
+                return true
             }
 
             R.id.go_create_main -> {
-                replaceFragment(Create_mainFragment())
-                return@OnNavigationItemSelectedListener true
+                val fragmentB = Create_mainFragment()
+                transaction.replace(R.id.fragment_container, fragmentB)
+                transaction.commit()
+                return true
             }
 
             R.id.go_certify_main -> {
-                replaceFragment(Certify_mainFragment())
-                return@OnNavigationItemSelectedListener true
+                val fragmentC = Certify_mainFragment()
+                transaction.replace(R.id.fragment_container, fragmentC)
+                transaction.commit()
+                return true
             }
 
             R.id.go_ranking_main -> {
-                replaceFragment(Ranking_mainFragment())
-                return@OnNavigationItemSelectedListener true
+                val fragmentD = Ranking_mainFragment()
+                transaction.replace(R.id.fragment_container, fragmentD)
+                transaction.commit()
+                return true
             }
 
             R.id.go_mypage_main -> {
-                Log.d("aaaaaaaaaaaa","aaaaaaaaaaaa")
-                replaceFragment(Mypage_mainFragment())
-                return@OnNavigationItemSelectedListener true
+                val fragmentE = Mypage_mainFragment()
+                transaction.replace(R.id.fragment_container, fragmentE)
+                transaction.commit()
+                return true
             }
-
-            else -> false
         }
+        return false
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        val fragmentA = Challenge_mainFragment()
 
-    fun replaceFragment(fragment: Fragment) {
-        val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragment_container, fragment)
-        fragmentTransaction.commit()
-
+        val nav=findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragmentA).commitAllowingStateLoss();
+        nav.setOnNavigationItemSelectedListener(this)
     }
-
 }

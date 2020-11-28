@@ -1,51 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.handa.Challenge_mainFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/gameOverConstraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
-
-    <Button
-        android:id="@+id/tryAgainButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="400dp"
-        android:text="챌린지메인"
-
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-        <FrameLayout
-            android:id="@+id/fragment_container"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:menu="@menu/nav_bar"
-            app:itemTextColor="#4CAF50"
-            android:background="#FFD400"
-            app:layout_constraintTop_toBottomOf="@id/fragment_container"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.33dp"
+                    android:layout_marginTop="26.67dp"
+                    android:layout_marginRight="13.33dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_diet"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.67dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_02"
+                        android:drawableTop="@drawable/my_on"
+                        android:drawablePadding="1dp"
+                        android:text="다이어트">
+                    </Button>
+
+                    <Button
+                        android:id="@+id/button_study"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.67dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_02"
+                        android:drawableTop="@drawable/my_on"
+                        android:drawablePadding="1dp"
+                        android:text="공부"></Button>
+
+                    <Button
+                        android:id="@+id/button_pattern"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.67dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_02"
+                        android:drawableTop="@drawable/my_on"
+                        android:drawablePadding="1dp"
+                        android:text="생활습관">
+                    </Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.33dp"
+                    android:layout_marginTop="26.67dp"
+                    android:layout_marginRight="13.33dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/button_hobby"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.67dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_02"
+                        android:drawableTop="@drawable/my_on"
+                        android:text="취미">
+                    </Button>
+
+                    <Button
+                        android:id="@+id/button_lang"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.67dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="18dip"
+                        android:gravity="left|center_vertical"
+                        android:background="@drawable/button_02"
+                        android:drawableTop="@drawable/my_on"
+                        android:text="언어">
+                    </Button>
+
+                    <Button
+                        android:id="@+id/button_money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.67dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_02"
+                        android:drawableTop="@drawable/my_on"
+                        android:drawablePadding="1dp"
+                        android:text="돈관리">
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></LinearLayout>
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

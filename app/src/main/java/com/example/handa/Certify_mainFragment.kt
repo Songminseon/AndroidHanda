@@ -15,6 +15,9 @@ class Certify_mainFragment : Fragment() {
 
         val binding = DataBindingUtil.inflate<CertifyMainBinding>(inflater,
             R.layout.certify_main,container,false)
+
+
+
         return binding.root
     }
 
