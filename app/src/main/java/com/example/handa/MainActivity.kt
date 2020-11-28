@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.MenuItem
 
 import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -58,9 +60,9 @@ class MainActivity : AppCompatActivity(),BottomNavigationView.OnNavigationItemSe
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val fragmentA = Challenge_mainFragment()
-
-        val nav=findViewById<BottomNavigationView>(R.id.bottom_navigation)
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragmentA).commitAllowingStateLoss();
+        val nav=findViewById<BottomNavigationView>(R.id.bottom_navigation)
         nav.setOnNavigationItemSelectedListener(this)
+
     }
 }

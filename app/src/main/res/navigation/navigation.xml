@@ -3,57 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/challenge_detailFragment">
+    app:startDestination="@id/ChallengeMainFragment">
+
     <fragment
-        android:id="@+id/certify_mainFragment"
-        android:name="com.example.handa.Certify_mainFragment"
-        android:label="certify_main"
-        tools:layout="@layout/certify_main" />
-    <fragment
-        android:id="@+id/create_mainFragment"
-        android:name="com.example.handa.Create_mainFragment"
-        android:label="create_main"
-        tools:layout="@layout/create_main" />
-    <fragment
-        android:id="@+id/challenge_mainFragment"
+        android:id="@+id/ChallengeMainFragment"
         android:name="com.example.handa.Challenge_mainFragment"
-        android:label="ranking_main"
-        tools:layout="@layout/ranking_main" >
+        android:label="fragment_title"
+        tools:layout="@layout/challenge_main" >
         <action
-            android:id="@+id/action_challenge_mainFragment_to_challenge_detailFragment"
+            android:id="@+id/action_ChallengeMainFragment_to_challenge_detailFragment"
             app:destination="@id/challenge_detailFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/ranking_mainFragment"
-        android:name="com.example.handa.Ranking_mainFragment"
-        android:label="Ranking_mainFragment" />
-    <fragment
-        android:id="@+id/indexFragment"
-        android:name="com.example.handa.IndexFragment"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" >
-        <action
-            android:id="@+id/action_indexFragment_to_challenge_mainFragment"
-            app:destination="@id/challenge_mainFragment" />
-        <action
-            android:id="@+id/action_indexFragment_to_create_mainFragment"
-            app:destination="@id/create_mainFragment" />
-        <action
-            android:id="@+id/action_indexFragment_to_certify_mainFragment"
-            app:destination="@id/certify_mainFragment" />
-        <action
-            android:id="@+id/action_indexFragment_to_ranking_mainFragment"
-            app:destination="@id/ranking_mainFragment" />
-        <action
-            android:id="@+id/action_indexFragment_to_mypage_mainFragment"
-            app:destination="@id/mypage_mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/challenge_detailFragment"
         android:name="com.example.handa.Challenge_detailFragment"
-        android:label="Challenge_detailFragment" />
-    <fragment
-        android:id="@+id/mypage_mainFragment"
-        android:name="com.example.handa.Mypage_mainFragment"
-        android:label="Mypage_mainFragment" />
+        android:label="Challenge_detailFragment"
+        tools:layout="@layout/challenge_detail"/>
+
+
 </navigation>

@@ -18,6 +18,7 @@ class Certify_mainFragment : Fragment() {
 
 
 
+
         return binding.root
     }
 
