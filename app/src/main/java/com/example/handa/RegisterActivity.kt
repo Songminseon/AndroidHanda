@@ -42,9 +42,9 @@ class RegisterActivity: AppCompatActivity(){
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success")
                             val user = auth.currentUser
-/*                            val data = Post(name.toString())
-                            val info = data.toMap()*/
-                            DatabaseReference.child("userDB").child(user?.uid.toString()).setValue(name.text.toString())
+                            val data = Post(name.text.toString(),point=0)
+                            val info = data.toMap()
+                            DatabaseReference.child("userDB").child(user?.uid.toString()).setValue(info)
                             finish()
                         } else {
                             // If sign in fails, display a message to the user.

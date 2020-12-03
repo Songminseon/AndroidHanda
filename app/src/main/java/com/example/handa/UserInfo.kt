@@ -6,14 +6,16 @@ import com.google.firebase.firestore.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 data class Post(
-    var name: String?=""
+    var name: String?="",
+    var point: Int=0
 ) {
 
     // [START post_to_map]
     @Exclude
-    fun toMap(): Map<String, String?> {
+    fun toMap(): Map<String, Any?> {
         return mapOf(
-            "name" to name
+            "name" to name,
+            "point" to point
         )
     }
 }

@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation"
+    android:id="@+id/nav_main"
     app:startDestination="@id/ChallengeMain">
 
     <fragment
@@ -10,6 +10,9 @@
         android:name="com.example.handa.fragments.ChallengeMain"
         android:label="ChallengeMain"
         tools:layout="@layout/challenge_main" >
+        <action
+            android:id="@+id/action_ChallengeMain_to_challengeDetail"
+            app:destination="@id/challengeDetail" />
     </fragment>
     <fragment
         android:id="@+id/CreateMain"
@@ -29,8 +32,15 @@
         android:label="RankingMain"
         tools:layout="@layout/ranking_main" >
     </fragment>
-
-
-
-
+    <fragment
+        android:id="@+id/challengeDetail"
+        android:name="com.example.handa.fragments.ChallengeDetail"
+        android:label="ChallengeDetail"
+        tools:layout="@layout/challenge_detail" >
+        <argument
+            android:name="param_count"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <action android:id="@+id/action_global_challengeDetail" app:destination="@id/challengeDetail" />
 </navigation>

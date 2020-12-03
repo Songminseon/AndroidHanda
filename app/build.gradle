@@ -52,7 +52,7 @@ dependencies {
 
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation 'com.google.firebase:firebase-firestore:22.0.0'
     implementation 'com.google.firebase:firebase-database:19.5.1'
     kapt 'com.android.databinding:compiler:3.5.3'
