@@ -15,6 +15,5 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         NavigationUI.setupWithNavController(main_bottom_navigation, findNavController(R.id.nav_host))
 
-
     }
 }

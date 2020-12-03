@@ -1,6 +1,7 @@
 package com.example.handa.fragments
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,9 +27,9 @@ class ChallengeList: Fragment(){
     )
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
 
         return inflater.inflate(R.layout.challenge_list, container, false)
@@ -37,8 +38,8 @@ class ChallengeList: Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val mAdapter = ChallengeAdapter(requireContext(), challengeList)
-        challenge_recyclerView.adapter = mAdapter
-        val lm = GridLayoutManager(requireContext(),2)
-        challenge_recyclerView.layoutManager = lm
+        challenge_recyclerView1.adapter = mAdapter
+        val lm = GridLayoutManager(requireContext(), 2)
+        challenge_recyclerView1.layoutManager = lm
     }
 }
