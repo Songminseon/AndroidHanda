@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.firestore.FirebaseFirestore
 
 
 class RegisterActivity: AppCompatActivity(){
@@ -24,7 +23,6 @@ class RegisterActivity: AppCompatActivity(){
 
         auth=FirebaseAuth.getInstance()
 
-        val db = FirebaseFirestore.getInstance()
 
         val email=findViewById<EditText>(R.id.su_email)
         val pd=findViewById<EditText>(R.id.su_pd)

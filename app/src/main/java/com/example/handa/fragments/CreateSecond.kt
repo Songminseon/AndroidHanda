@@ -23,10 +23,29 @@ class CreateSecond : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.radioGroup.setOnCheckedChangeListener{group,checkedId ->
+        view.radioGroup2.setOnCheckedChangeListener{ radioGroup: RadioGroup, i: Int ->
+            when (i){
+                R.id.second_rb1 ->{
+                    view.findNavController().navigate(R.id.action_createSecond_to_createThird)
+                }
+                R.id.second_rb2 ->{
+                    view.findNavController().navigate(R.id.action_createSecond_to_createThird)
 
+                }
+                R.id.second_rb3 ->{
+                    view.findNavController().navigate(R.id.action_createSecond_to_createThird)
+                }
+                R.id.second_rb4 ->{
+                    view.findNavController().navigate(R.id.action_createSecond_to_createThird)
+                }
+                R.id.second_rb5 ->{
+                    view.findNavController().navigate(R.id.action_createSecond_to_createThird)
+                }
+                R.id.second_rb6 ->{
+                    view.findNavController().navigate(R.id.action_createSecond_to_createThird)
+                }
+            }
+            }
         }
-
     }
 
-}

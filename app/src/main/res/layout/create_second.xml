@@ -24,43 +24,43 @@
             android:textSize="20dp" />
 
         <RadioGroup
-            android:id="@+id/radioGroup"
+            android:id="@+id/radioGroup2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center">
 
             <RadioButton
-                android:id="@+id/rb1"
+                android:id="@+id/second_rb1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Healthy" />
 
             <RadioButton
-                android:id="@+id/rb2"
+                android:id="@+id/second_rb2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Study" />
 
             <RadioButton
-                android:id="@+id/rb3"
+                android:id="@+id/second_rb3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lifestyle" />
 
             <RadioButton
-                android:id="@+id/rb4"
+                android:id="@+id/second_rb4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hobby" />
 
             <RadioButton
-                android:id="@+id/rb5"
+                android:id="@+id/second_rb5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Language" />
 
             <RadioButton
-                android:id="@+id/rb6"
+                android:id="@+id/second_rb6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Money" />

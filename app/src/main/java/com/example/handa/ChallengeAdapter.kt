@@ -26,7 +26,7 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder?.bind(challengeList[position], context)
+        holder.bind(challengeList[position], context)
         holder.itemView.setOnClickListener{
             val intent = Intent(holder.itemView.context, ChallengeDetail::class.java)
             startActivity(holder.itemView.context,intent,null)
