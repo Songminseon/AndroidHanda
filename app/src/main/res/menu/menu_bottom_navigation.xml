@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ChallengeMain"
+        android:icon="@drawable/ic_folder"
+        android:title="@string/menu_challenge" />
+
+    <item
+        android:id="@+id/CreateMain"
+        android:icon="@drawable/ic_folder"
+        android:title="@string/menu_create"/>
+
+    <item
+        android:id="@+id/CertifyMain"
+        android:icon="@drawable/ic_folder"
+        android:title="@string/menu_certify"/>
+
+    <item
+        android:id="@+id/RankingMain"
+        android:icon="@drawable/ic_folder"
+        android:title="@string/menu_ranking"/>
+
+</menu>

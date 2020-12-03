@@ -1,4 +1,4 @@
-package com.example.handa
+package com.example.handa.fragments
 
 import android.app.AppComponentFactory
 import android.util.Log

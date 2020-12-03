@@ -1,24 +1,21 @@
-package com.example.handa
+package com.example.handa.fragments
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.example.handa.databinding.MypageMainBinding
+import com.example.handa.R
 
 
-class Mypage_mainFragment: Fragment(){
+class RankingMain : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<MypageMainBinding>(inflater,
-            R.layout.mypage_main,container,false)
-        return binding.root
+        return inflater.inflate(R.layout.ranking_main, container, false)
     }
 }

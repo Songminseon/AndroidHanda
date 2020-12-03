@@ -1,17 +1,17 @@
-package com.example.handa
+package com.example.handa.fragments
 
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.example.handa.R
 import com.example.handa.databinding.ChallengeDetailBinding
 
 
-class Challenge_detailFragment: Fragment(){
+class ChallengeDetail: Fragment(){
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/ChallengeMain">
+
+    <fragment
+        android:id="@+id/ChallengeMain"
+        android:name="com.example.handa.fragments.ChallengeMain"
+        android:label="ChallengeMain"
+        tools:layout="@layout/challenge_main" >
+    </fragment>
+    <fragment
+        android:id="@+id/CreateMain"
+        android:name="com.example.handa.fragments.CreateMain"
+        android:label="CreateMain"
+        tools:layout="@layout/create_main" >
+    </fragment>
+    <fragment
+        android:id="@+id/CertifyMain"
+        android:name="com.example.handa.fragments.CertifyMain"
+        android:label="CertifyMain"
+        tools:layout="@layout/certify_main" >
+    </fragment>
+    <fragment
+        android:id="@+id/RankingMain"
+        android:name="com.example.handa.fragments.RankingMain"
+        android:label="RankingMain"
+        tools:layout="@layout/ranking_main" >
+    </fragment>
+
+
+
+
+</navigation>
