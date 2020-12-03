@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.challenge_item.view.*
@@ -25,6 +26,9 @@ class ChallengeAdapter(val context: Context, val challengeList:ArrayList<Challen
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder?.bind(challengeList[position], context)
+        holder.itemView.setOnClickListener {
+            holder.itemView.findNavController().navigate(R.id.action_challengeList_to_challengeDetail)
+        }
     }
 
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {

@@ -11,8 +11,8 @@
         android:label="ChallengeMain"
         tools:layout="@layout/challenge_main" >
         <action
-            android:id="@+id/action_ChallengeMain_to_challengeDetail"
-            app:destination="@id/challengeDetail" />
+            android:id="@+id/action_ChallengeMain_to_challengeList"
+            app:destination="@id/challengeList" />
     </fragment>
     <fragment
         android:id="@+id/CreateMain"
@@ -33,14 +33,22 @@
         tools:layout="@layout/ranking_main" >
     </fragment>
     <fragment
-        android:id="@+id/challengeDetail"
-        android:name="com.example.handa.fragments.ChallengeDetail"
+        android:id="@+id/challengeList"
+        android:name="com.example.handa.fragments.ChallengeList"
         android:label="ChallengeDetail"
-        tools:layout="@layout/challenge_detail" >
+        tools:layout="@layout/challenge_list" >
         <argument
             android:name="param_count"
             app:argType="integer"
             android:defaultValue="0" />
+        <action
+            android:id="@+id/action_challengeList_to_challengeDetail"
+            app:destination="@id/challengeDetail" />
     </fragment>
-    <action android:id="@+id/action_global_challengeDetail" app:destination="@id/challengeDetail" />
+    <action android:id="@+id/action_global_challengeDetail" app:destination="@id/challengeList" />
+    <fragment
+        android:id="@+id/challengeDetail"
+        android:name="com.example.handa.fragments.ChallengeDetail"
+        android:label="ChallengeDetail"
+        tools:layout="@layout/challenge_detail"/>
 </navigation>

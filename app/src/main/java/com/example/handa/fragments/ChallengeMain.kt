@@ -24,7 +24,7 @@ class ChallengeMain : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.button_diet.setOnClickListener {
-            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeDetail)
+            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
         }
     }
 
