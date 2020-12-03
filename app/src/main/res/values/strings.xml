@@ -4,8 +4,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
-    <string name="menu_challenge">챌린지 메인</string>
-    <string name="menu_create">생성하기</string>
-    <string name="menu_certify">인증</string>
-    <string name="menu_ranking">랭킹</string>
+    <string name="menu_challenge">Main</string>
+    <string name="menu_create">Create</string>
+    <string name="menu_certify">Certify</string>
+    <string name="menu_ranking">Ranking</string>
 </resources>

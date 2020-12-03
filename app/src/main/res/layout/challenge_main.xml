@@ -15,13 +15,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -32,40 +25,25 @@
                 android:layout_marginTop="26.67dp"
                 android:layout_marginRight="13.33dp"
                 android:layout_weight="1"
+
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/button_diet"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="75dp"
+                    android:layout_height="120dp"
                     android:layout_marginRight="10.67dp"
                     android:layout_weight="1"
-                    android:background="@drawable/button_02"
-                    android:drawableTop="@drawable/my_on"
-                    android:drawablePadding="1dp"
-                    android:text="다이어트"></Button>
+                    android:text="Diet"></Button>
 
                 <Button
                     android:id="@+id/button_study"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="75dp"
+                    android:layout_height="120dp"
                     android:layout_marginRight="10.67dp"
                     android:layout_weight="1"
-                    android:background="@drawable/button_02"
-                    android:drawableTop="@drawable/my_on"
-                    android:drawablePadding="1dp"
-                    android:text="공부"></Button>
+                    android:text="Study"></Button>
 
-                <Button
-                    android:id="@+id/button_pattern"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10.67dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_02"
-                    android:drawableTop="@drawable/my_on"
-                    android:drawablePadding="1dp"
-                    android:text="생활습관"></Button>
             </LinearLayout>
 
             <LinearLayout
@@ -79,43 +57,55 @@
 
                 <Button
                     android:id="@+id/button_hobby"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="75dp"
+                    android:layout_height="120dp"
                     android:layout_marginRight="10.67dp"
                     android:layout_weight="1"
-                    android:background="@drawable/button_02"
-                    android:drawableTop="@drawable/my_on"
-                    android:text="취미"></Button>
-
-                <Button
-                    android:id="@+id/button_lang"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10.67dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_02"
-                    android:drawableTop="@drawable/my_on"
-                    android:drawablePadding="18dip"
-                    android:gravity="left|center_vertical"
-                    android:text="언어"></Button>
+                    android:text="Hobby"></Button>
 
                 <Button
                     android:id="@+id/button_money"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="75dp"
+                    android:layout_height="120dp"
                     android:layout_marginRight="10.67dp"
                     android:layout_weight="1"
-                    android:background="@drawable/button_02"
-                    android:drawableTop="@drawable/my_on"
-                    android:drawablePadding="1dp"
-                    android:text="돈관리"></Button>
+                    android:text="Accounting"></Button>
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13.33dp"
+                android:layout_marginTop="26.67dp"
+                android:layout_marginRight="13.33dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_lang"
+                    android:layout_width="75dp"
+                    android:layout_height="120dp"
+                    android:layout_marginRight="10.67dp"
+                    android:layout_weight="1"
+
+                    android:text="Language"></Button>
+
+                <Button
+                    android:id="@+id/button_pattern"
+                    android:layout_width="75dp"
+                    android:layout_height="120dp"
+                    android:layout_marginRight="10.67dp"
+                    android:layout_weight="1"
+                    android:text="Daily Routine"></Button>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
