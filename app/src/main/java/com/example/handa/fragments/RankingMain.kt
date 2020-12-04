@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.handa.R
+import com.example.handa.databinding.RankingMainBinding
 
 
 class RankingMain : Fragment() {
@@ -16,6 +17,10 @@ class RankingMain : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.ranking_main, container, false)
+
+        val binding = DataBindingUtil.inflate<RankingMainBinding>(inflater,
+        R.layout.ranking_main, container, false)
+
+        return binding.root
     }
 }

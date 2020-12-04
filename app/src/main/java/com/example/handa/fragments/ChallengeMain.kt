@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.handa.Cat
 import com.example.handa.R
+import com.example.handa.databinding.ChallengeMainBinding
 import kotlinx.android.synthetic.main.challenge_main.view.*
 
 
@@ -18,6 +20,7 @@ class ChallengeMain : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
 
         return inflater.inflate(R.layout.challenge_main, container, false)
     }
@@ -50,6 +53,14 @@ class ChallengeMain : Fragment() {
             Cat.cat="routine"
 
         }
+
+    return binding.root
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//        view.button_diet.setOnClickListener {
+//            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
+//        }
     }
 
 }

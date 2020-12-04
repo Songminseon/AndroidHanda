@@ -18,10 +18,10 @@ class CreateSixth : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.create_sixth, container, false)
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        view.createButton6.setOnClickListener{
-            view.findNavController().navigate(R.id.action_createSixth_to_createSeventh)
-        }
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//        view.createButton6.setOnClickListener{
+//            view.findNavController().navigate(R.id.action_createSixth_to_createSeventh)
+//        }
+//    }
 }

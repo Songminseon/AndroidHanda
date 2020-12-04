@@ -19,28 +19,28 @@ class CreateFifth : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.create_fifth, container, false)
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        view.radioGroup5.setOnCheckedChangeListener{ radioGroup: RadioGroup, i: Int ->
-            when (i){
-                R.id.f_rb1 ->{
-                    view.findNavController().navigate(R.id.action_createFifth_to_createSixth)
-                }
-                R.id.f_rb2 ->{
-                    view.findNavController().navigate(R.id.action_createFifth_to_createSixth)
-
-                }
-                R.id.f_rb3 ->{
-                    view.findNavController().navigate(R.id.action_createFifth_to_createSixth)
-                }
-                R.id.f_rb4 ->{
-                    view.findNavController().navigate(R.id.action_createFifth_to_createSixth)
-                }
-                R.id.f_rb5 ->{
-                    view.findNavController().navigate(R.id.action_createFifth_to_createSixth)
-                }
-            }
-
-        }
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//        view.radioGroup5.setOnCheckedChangeListener{ radioGroup: RadioGroup, i: Int ->
+//            when (i){
+//                R.id.f_rb1 ->{
+//                    view.findNavController().navigate(R.id.action_createFifth_to_createSixth)
+//                }
+//                R.id.f_rb2 ->{
+//                    view.findNavController().navigate(R.id.action_createFifth_to_createSixth)
+//
+//                }
+//                R.id.f_rb3 ->{
+//                    view.findNavController().navigate(R.id.action_createFifth_to_createSixth)
+//                }
+//                R.id.f_rb4 ->{
+//                    view.findNavController().navigate(R.id.action_createFifth_to_createSixth)
+//                }
+//                R.id.f_rb5 ->{
+//                    view.findNavController().navigate(R.id.action_createFifth_to_createSixth)
+//                }
+//            }
+//
+//        }
+//    }
 }
