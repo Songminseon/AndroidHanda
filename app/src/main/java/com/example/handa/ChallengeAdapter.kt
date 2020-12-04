@@ -63,6 +63,9 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
     fun clear() {
         challengeList.clear()
     }
-
+    fun addItem(challenge:Challenge){
+        challengeList.add(challenge)
+        notifyDataSetChanged()
+    }
 
 }

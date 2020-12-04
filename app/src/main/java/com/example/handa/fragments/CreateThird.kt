@@ -27,7 +27,6 @@ class CreateThird : Fragment() {
             R.layout.create_third, container, false
         )
 
-
         binding.submitButton.setOnClickListener { view: View ->
             val title = binding.editTextTitle.text.toString()
             val category = binding.editTextCategory.text.toString()
