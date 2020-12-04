@@ -13,6 +13,7 @@
         android:theme="@style/Theme.Handa">
         <activity android:name=".MainActivity"/>
         <activity android:name=".RegisterActivity"/>
+        <activity android:name=".ChallengeDetail"/>
         <activity android:name=".LoginActivity">
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

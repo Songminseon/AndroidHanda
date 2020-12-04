@@ -1,18 +1,19 @@
 package com.example.handa
 
+import android.app.PendingIntent.getActivity
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.navigation.findNavController
-
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.challenge_item.view.*
 
 
-class ChallengeAdapter(val context: Context, val challengeList:ArrayList<Challenge>) :
+class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challenge>) :
         RecyclerView.Adapter<ChallengeAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -25,9 +26,10 @@ class ChallengeAdapter(val context: Context, val challengeList:ArrayList<Challen
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder?.bind(challengeList[position], context)
-        holder.itemView.setOnClickListener {
-            holder.itemView.findNavController().navigate(R.id.action_challengeList_to_challengeDetail)
+        holder.bind(challengeList[position], context)
+        holder.itemView.setOnClickListener{
+            val intent = Intent(holder.itemView.context, ChallengeDetail::class.java)
+            startActivity(holder.itemView.context,intent,null)
         }
     }
 
@@ -37,7 +39,7 @@ class ChallengeAdapter(val context: Context, val challengeList:ArrayList<Challen
         val Remain = itemView?.findViewById<TextView>(R.id.Remain)
         val Term = itemView?.findViewById<TextView>(R.id.Term)
 
-        fun bind (challenge: Challenge, context: Context) {
+        fun bind(challenge: Challenge, context: Context) {
             /* dogPhoto의 setImageResource에 들어갈 이미지의 id를 파일명(String)으로 찾고,
             이미지가 없는 경우 안드로이드 기본 아이콘을 표시한다.*/
             if (challenge.photo != "") {
@@ -50,6 +52,7 @@ class ChallengeAdapter(val context: Context, val challengeList:ArrayList<Challen
             Title?.text = challenge.title
             Remain?.text =challenge.RemainDate
             Term?.text = challenge.term
+
         }
     }
 

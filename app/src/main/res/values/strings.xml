@@ -4,8 +4,19 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
-    <string name="menu_challenge">Main</string>
-    <string name="menu_create">Create</string>
-    <string name="menu_certify">Certify</string>
-    <string name="menu_ranking">Ranking</string>
+    <string name="menu_challenge">챌린지 메인</string>
+    <string name="menu_create">생성하기</string>
+    <string name="menu_certify">인증</string>
+    <string name="menu_ranking">랭킹</string>
+    <string name="make_new_challenge">Make New Challenge</string>
+    <string name="enter_the_challenge_name">Enter the Challenge Name</string>
+    <string name="if_you_use_words_that_offend_others_your_account_may_be_permanently_suspended">If you use words that offend others, your account may be permanently suspended.</string>
+    <string name="ex_wake_up_6_00am">Ex) Wake up 6:00AM</string>
+    <string name="please_enter_the_authentication_method">Please enter the authentication method</string>
+    <string name="write_down_specific_authentication_methods_so_that_you_can_know_whether_to_do_it_or_not">Write down specific authentication methods so that you can know whether to do it or not.</string>
+    <string name="write_store_book_take_a_picture_of_today_s_date_and_expenditure">Write Store Book - Take a picture of today\'s date and expenditure</string>
+    <string name="please_set_the_entry_fee">Please set the entry fee.</string>
+    <string name="it_starts_at_least_1_000_won">It starts at least 1,000 won.</string>
+    <string name="ex_1000">Ex ) 1000</string>
+    <string name="please_register_the_representative_photo">Please register the representative photo.</string>
 </resources>
