@@ -49,7 +49,7 @@ class FinishChallenge : AppCompatActivity() {
         setContentView(R.layout.finish_challenge)
         val mAdapter = FinishAdapter(this, finishlist)
         f_list.adapter = mAdapter
-        val lm = GridLayoutManager(this,3)
+        val lm = GridLayoutManager(this,2)
         f_list.layoutManager = lm
         val capture= findViewById<FloatingActionButton>(R.id.f_button)
 

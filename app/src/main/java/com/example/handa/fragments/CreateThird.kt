@@ -37,6 +37,7 @@ class CreateThird : Fragment() {
             myRef.child("challenge").child(title).child("part_money").setValue("0")
             myRef.child("challenge").child(title).child("part_people").setValue("0")
             view.findNavController().navigate(R.id.action_createThird_to_CreateMain)
+
         }
         return binding.root
     }

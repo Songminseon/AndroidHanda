@@ -201,7 +201,7 @@ class LoginActivity : AppCompatActivity(){
             data_c.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     for (ch in snapshot.children){
-                        if(user!!.uid.toString()==ch.value.toString()){
+                        if(user!!.uid==ch.key.toString()){
                             for(li in ch.children){
                                 val image = li.child("img_uri").value.toString()
                                 val mountainRef = mStorageRef!!.child("publicDiet/$image").downloadUrl
@@ -211,7 +211,7 @@ class LoginActivity : AppCompatActivity(){
                                     Certify(
                                         li.child("title").value.toString(),
                                         li.child("remain").value.toString(),
-                                        li.child("rate").value.toString().toDouble(),
+                                        li.child("rate").value.toString(),
                                         imageURL
                                     )
                                 )
