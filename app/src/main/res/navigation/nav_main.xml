@@ -103,5 +103,9 @@
         android:id="@+id/createSeventh"
         android:name="com.example.handa.fragments.CreateSeventh"
         android:label="create_seventh"
-        tools:layout="@layout/create_seventh" />
+        tools:layout="@layout/create_seventh" >
+        <action
+            android:id="@+id/action_createSeventh_to_CreateMain"
+            app:destination="@id/CreateMain" />
+    </fragment>
 </navigation>

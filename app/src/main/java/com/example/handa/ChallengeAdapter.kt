@@ -2,6 +2,8 @@ package com.example.handa
 
 import android.content.Context
 import android.content.Intent
+import android.provider.MediaStore
+import android.text.method.TextKeyListener.clear
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.handa.fragments.ChallengeList
 
 
 class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challenge>) :
@@ -27,7 +30,7 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
         holder.bind(challengeList[position], context)
         holder.itemView.setOnClickListener{
             val intent = Intent(holder.itemView.context, ChallengeDetail::class.java)
-            startActivity(holder.itemView.context,intent,null)
+            startActivity(holder.itemView.context, intent, null)
         }
     }
 
@@ -40,9 +43,12 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
         fun bind(challenge: Challenge, context: Context) {
             /* dogPhoto의 setImageResource에 들어갈 이미지의 id를 파일명(String)으로 찾고,
             이미지가 없는 경우 안드로이드 기본 아이콘을 표시한다.*/
-            if (challenge.photo != "") {
-                val resourceId = context.resources.getIdentifier(challenge.photo, "drawable", context.packageName)
-                Photo?.setImageResource(resourceId)
+            if (challenge.photo !=null) {
+                val bitmap= MediaStore.Images.Media.getBitmap(
+                    context.contentResolver,
+                    challenge.photo
+                )
+                Photo!!.setImageBitmap(bitmap)
             } else {
                 Photo?.setImageResource(R.mipmap.ic_launcher)
             }
@@ -52,6 +58,9 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
             Term?.text = challenge.term
 
         }
+    }
+    fun clear() {
+        challengeList.clear()
     }
 
 

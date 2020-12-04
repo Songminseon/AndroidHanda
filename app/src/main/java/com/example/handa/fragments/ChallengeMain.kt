@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.example.handa.Cat
 import com.example.handa.R
 import kotlinx.android.synthetic.main.challenge_main.view.*
 
@@ -22,9 +23,32 @@ class ChallengeMain : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         view.button_diet.setOnClickListener {
             view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
+            Cat.cat="diet"
+        }
+        view.button_study.setOnClickListener {
+            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
+            Cat.cat="study"
+        }
+        view.button_lang.setOnClickListener {
+            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
+            Cat.cat="language"
+
+        }
+        view.button_hobby.setOnClickListener {
+            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
+            Cat.cat="hobby"
+        }
+        view.button_money.setOnClickListener {
+            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
+            Cat.cat="money"
+
+        }
+        view.button_pattern.setOnClickListener {
+            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
+            Cat.cat="routine"
+
         }
     }
 
