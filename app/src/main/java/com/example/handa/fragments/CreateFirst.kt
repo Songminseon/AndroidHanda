@@ -23,7 +23,7 @@ class CreateFirst : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.createFirst.setOnClickListener {
-            view.findNavController().navigate(R.id.action_createFirst_to_createSecond)
+            view.findNavController().navigate(R.id.action_createFirst_to_createThird)
         }
 
     }
