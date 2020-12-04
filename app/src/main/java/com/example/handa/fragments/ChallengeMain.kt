@@ -24,6 +24,7 @@ class ChallengeMain : Fragment() {
 
         return inflater.inflate(R.layout.challenge_main, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.button_diet.setOnClickListener {
@@ -54,13 +55,6 @@ class ChallengeMain : Fragment() {
 
         }
 
-    return binding.root
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        view.button_diet.setOnClickListener {
-//            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
-//        }
     }
 
 }

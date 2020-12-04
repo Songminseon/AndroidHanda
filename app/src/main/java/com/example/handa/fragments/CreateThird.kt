@@ -1,24 +1,17 @@
 package com.example.handa.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.os.bundleOf
+
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.navigation.findNavController
 import com.example.handa.R
 import com.example.handa.databinding.CreateThirdBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.create_sixth.*
-import kotlinx.android.synthetic.main.create_third.*
-import kotlinx.android.synthetic.main.create_third.view.*
 
 class CreateThird : Fragment() {
     override fun onCreateView(

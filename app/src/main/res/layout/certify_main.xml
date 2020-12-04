@@ -4,19 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.handa.fragments.CertifyMain">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-</androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/certifyList"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/certifyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

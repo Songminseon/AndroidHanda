@@ -55,8 +55,8 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
             }
             /* 나머지 TextView와 String 데이터를 연결한다. */
             Title?.text = challenge.title
-            Remain?.text =challenge.description
-            Term?.text = challenge.category
+            Remain?.text =challenge.RemainDate
+            Term?.text = challenge.term
 
         }
     }
