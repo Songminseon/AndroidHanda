@@ -27,106 +27,24 @@ class ChallengeList: Fragment(){
     var imageURL: Uri?=null
     lateinit var mAdapter:ChallengeAdapter
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         binding= DataBindingUtil.inflate(inflater, R.layout.challenge_list, container, false)
         binding.cat= Category(Cat.cat)
-        mStorageRef = FirebaseStorage.getInstance().reference
-
-        val data= database.getReference("challenge")
-        data.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                for (ch in snapshot.children) {
-                    if (ch.child("category").value.toString() == Cat.cat) {
-                        val image=ch.child("image").value.toString()
-                        val mountainRef = mStorageRef!!.child("publicDiet/$image").downloadUrl
-                            .addOnSuccessListener{ imageURL=it }
-                            .addOnFailureListener{}
-                        Cat.category_d.add(Challenge(
-                            ch.child("category").value.toString(),
-                            ch.child("title").value.toString(),
-                            ch.child("remain").value.toString(),
-                            ch.child("term").value.toString(),
-                            imageURL))
-                    }
-                    if (ch.child("category").value.toString() == Cat.cat) {
-                        val image=ch.child("image").value.toString()
-                        val mountainRef = mStorageRef!!.child("publicStudy/$image").downloadUrl
-                            .addOnSuccessListener{ imageURL=it }
-                            .addOnFailureListener{}
-                        Cat.category_s.add(Challenge(
-                            ch.child("category").value.toString(),
-                            ch.child("title").value.toString(),
-                            ch.child("remain").value.toString(),
-                            ch.child("term").value.toString(),
-                            imageURL))
-                    }
-                    if (ch.child("category").value.toString() == Cat.cat) {
-                        val image=ch.child("image").value.toString()
-                        val mountainRef = mStorageRef!!.child("publicHobby/$image").downloadUrl
-                            .addOnSuccessListener{ imageURL=it }
-                            .addOnFailureListener{}
-                        Cat.category_h.add(Challenge(
-                            ch.child("category").value.toString(),
-                            ch.child("title").value.toString(),
-                            ch.child("remain").value.toString(),
-                            ch.child("term").value.toString(),
-                            imageURL))
-                    }
-                    if (ch.child("category").value.toString() == Cat.cat) {
-                        val image=ch.child("image").value.toString()
-                        val mountainRef = mStorageRef!!.child("publicMoney/$image").downloadUrl
-                            .addOnSuccessListener{ imageURL=it }
-                            .addOnFailureListener{}
-                        Cat.category_m.add(Challenge(
-                            ch.child("category").value.toString(),
-                            ch.child("title").value.toString(),
-                            ch.child("remain").value.toString(),
-                            ch.child("term").value.toString(),
-                            imageURL))
-                    }
-                    if (ch.child("category").value.toString() == Cat.cat) {
-                        val image=ch.child("image").value.toString()
-                        val mountainRef = mStorageRef!!.child("publicLanguage/$image").downloadUrl
-                            .addOnSuccessListener{ imageURL=it }
-                            .addOnFailureListener{}
-                        Cat.category_l.add(Challenge(
-                            ch.child("category").value.toString(),
-                            ch.child("title").value.toString(),
-                            ch.child("remain").value.toString(),
-                            ch.child("term").value.toString(),
-                            imageURL))
-                    }
-                    if (ch.child("category").value.toString() == Cat.cat) {
-                        val image=ch.child("image").value.toString()
-                        val mountainRef = mStorageRef!!.child("publicDaily/$image").downloadUrl
-                            .addOnSuccessListener{ imageURL=it }
-                            .addOnFailureListener{}
-                        Cat.category_r.add(Challenge(
-                            ch.child("category").value.toString(),
-                            ch.child("title").value.toString(),
-                            ch.child("remain").value.toString(),
-                            ch.child("term").value.toString(),
-                            imageURL))
-                    }
-
-
-                }
-            }
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
-        })
 
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
         when(Cat.cat){
             "diet" -> mAdapter = ChallengeAdapter(requireContext(),Cat.category_d)
             "study" -> mAdapter = ChallengeAdapter(requireContext(),Cat.category_s)

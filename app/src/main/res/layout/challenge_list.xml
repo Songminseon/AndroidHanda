@@ -30,7 +30,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:textSize="20dp"
-                    android:text="@{cat.cat_sel}"/>
+                    android:text="@{cat.Cat_sel}"/>
             </Toolbar>
 
         </LinearLayout>

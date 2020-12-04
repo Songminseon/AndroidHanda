@@ -8,9 +8,6 @@ object Cat {
     var category_m=arrayListOf<Challenge>()
     var category_l=arrayListOf<Challenge>()
     var category_r=arrayListOf<Challenge>()
-
-
-
-
+    var category_t=arrayListOf<Challenge>()
 
 }

@@ -42,7 +42,10 @@ class RegisterActivity: AppCompatActivity(){
                             val user = auth.currentUser
                             val data = Post(name.text.toString(),point=0)
                             val info = data.toMap()
+
                             DatabaseReference.child("userDB").child(user?.uid.toString()).setValue(info)
+                            DatabaseReference.child("certify").child(user?.uid.toString()).setValue(0)
+
                             finish()
                         } else {
                             // If sign in fails, display a message to the user.

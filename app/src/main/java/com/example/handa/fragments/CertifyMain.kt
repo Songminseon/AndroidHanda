@@ -12,15 +12,6 @@ import kotlinx.android.synthetic.main.certify_main.*
 
 
 class CertifyMain : Fragment() {
-    var certifylist = arrayListOf<Certify>(
-        Certify("Title", "3days", 10.2, "practice"),
-        Certify("Title", "3days", 10.2, "practice"),
-        Certify("Title", "3days", 10.2, "practice"),
-        Certify("Title", "3days", 10.2, "practice"),
-        Certify("Title", "3days", 10.2, "practice"),
-        Certify("Title", "3days", 10.2, "practice"),
-        Certify("Title", "3days", 10.2, "practice")
-    )
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -32,7 +23,7 @@ class CertifyMain : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val mAdapter = CertifyAdapter(requireContext(), certifylist)
+        val mAdapter = CertifyAdapter(requireContext(), Cer.user_list)
         certifyList.adapter = mAdapter
         val lm = LinearLayoutManager(requireContext())
         certifyList.layoutManager=lm

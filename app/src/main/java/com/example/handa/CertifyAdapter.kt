@@ -2,6 +2,7 @@ package com.example.handa
 
 import android.content.Context
 import android.content.Intent
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,9 +41,12 @@ class CertifyAdapter(val context: Context, val certifyList: ArrayList<Certify>) 
         fun bind(certify: Certify, context: Context) {
             /* dogPhoto의 setImageResource에 들어갈 이미지의 id를 파일명(String)으로 찾고,
             이미지가 없는 경우 안드로이드 기본 아이콘을 표시한다.*/
-            if (certify.c_image != "") {
-                val resourceId = context.resources.getIdentifier(certify.c_image, "drawable", context.packageName)
-                Photo?.setImageResource(resourceId)
+            if (certify.c_image !=null) {
+                val bitmap= MediaStore.Images.Media.getBitmap(
+                    context.contentResolver,
+                    certify.c_image
+                )
+                Photo!!.setImageBitmap(bitmap)
             } else {
                 Photo?.setImageResource(R.mipmap.ic_launcher)
             }

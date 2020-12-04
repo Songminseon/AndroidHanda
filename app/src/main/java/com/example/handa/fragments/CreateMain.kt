@@ -23,8 +23,6 @@ import kotlinx.android.synthetic.main.create_main.view.*
 
 class CreateMain : Fragment() {
     lateinit var binding: CreateMainBinding
-    val database: FirebaseDatabase = FirebaseDatabase.getInstance()
-    private var mStorageRef: StorageReference? = null
     var total_list=arrayListOf<Challenge>()
 
     override fun onCreateView(
@@ -32,20 +30,15 @@ class CreateMain : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        total_list.addAll(Cat.category_s)
-        total_list.addAll(Cat.category_d)
-        total_list.addAll(Cat.category_h)
-        total_list.addAll(Cat.category_m)
-        total_list.addAll(Cat.category_l)
-        total_list.addAll(Cat.category_r)
         binding= DataBindingUtil.inflate(inflater, R.layout.create_main, container, false)
-        mStorageRef = FirebaseStorage.getInstance().reference
+
         return binding.root
+
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val mAdapter = ChallengeAdapter(requireContext(), total_list)
+        val mAdapter = ChallengeAdapter(requireContext(), Cat.category_t)
         challenge_recyclerView2.adapter = mAdapter
         val lm = GridLayoutManager(requireContext(), 2)
         challenge_recyclerView2.layoutManager = lm
