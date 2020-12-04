@@ -17,7 +17,6 @@ class LoginActivity : AppCompatActivity(){
     private var auth: FirebaseAuth? = null
     private val TAG : String = "Login"
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign_in)

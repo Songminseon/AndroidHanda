@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="79dp"
-        android:text="button"
+        android:text="Upload photo"
         app:layout_constraintBottom_toTopOf="@+id/CreateFinish"
         app:layout_constraintEnd_toEndOf="@+id/Rep_photo"
         app:layout_constraintStart_toStartOf="@+id/Rep_photo"

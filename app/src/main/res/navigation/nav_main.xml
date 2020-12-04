@@ -51,35 +51,8 @@
         android:label="create_First"
         tools:layout="@layout/create_first" >
         <action
-            android:id="@+id/action_createFirst_to_createSecond"
-            app:destination="@id/createSecond" />
-    </fragment>
-    <fragment
-        android:id="@+id/createSecond"
-        android:name="com.example.handa.fragments.CreateSecond"
-        android:label="CreateSecond"
-        tools:layout="@layout/create_second">
-        <action
-            android:id="@+id/action_createSecond_to_createThird"
+            android:id="@+id/action_createFirst_to_createThird"
             app:destination="@id/createThird" />
-    </fragment>
-    <fragment
-        android:id="@+id/createFifth"
-        android:name="com.example.handa.fragments.CreateFifth"
-        android:label="create_fifth"
-        tools:layout="@layout/create_fifth" >
-        <action
-            android:id="@+id/action_createFifth_to_createSixth"
-            app:destination="@id/createSixth" />
-    </fragment>
-    <fragment
-        android:id="@+id/createFourth"
-        android:name="com.example.handa.fragments.CreateFourth"
-        android:label="create_fourth"
-        tools:layout="@layout/create_fourth" >
-        <action
-            android:id="@+id/action_createFourth_to_createFifth"
-            app:destination="@id/createFifth" />
     </fragment>
     <fragment
         android:id="@+id/createThird"
@@ -87,25 +60,7 @@
         android:label="create_third"
         tools:layout="@layout/create_third" >
         <action
-            android:id="@+id/action_createThird_to_createFourth"
-            app:destination="@id/createFourth" />
-    </fragment>
-    <fragment
-        android:id="@+id/createSixth"
-        android:name="com.example.handa.fragments.CreateSixth"
-        android:label="create_sixth"
-        tools:layout="@layout/create_sixth" >
-        <action
-            android:id="@+id/action_createSixth_to_createSeventh"
-            app:destination="@id/createSeventh" />
-    </fragment>
-    <fragment
-        android:id="@+id/createSeventh"
-        android:name="com.example.handa.fragments.CreateSeventh"
-        android:label="create_seventh"
-        tools:layout="@layout/create_seventh" >
-        <action
-            android:id="@+id/action_createSeventh_to_CreateMain"
+            android:id="@+id/action_createThird_to_CreateMain"
             app:destination="@id/CreateMain" />
     </fragment>
 </navigation>

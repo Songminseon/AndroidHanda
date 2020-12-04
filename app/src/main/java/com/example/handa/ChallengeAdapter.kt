@@ -40,6 +40,7 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
         val Remain = itemView?.findViewById<TextView>(R.id.Remain)
         val Term = itemView?.findViewById<TextView>(R.id.Term)
 
+
         fun bind(challenge: Challenge, context: Context) {
             /* dogPhoto의 setImageResource에 들어갈 이미지의 id를 파일명(String)으로 찾고,
             이미지가 없는 경우 안드로이드 기본 아이콘을 표시한다.*/
@@ -54,8 +55,8 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
             }
             /* 나머지 TextView와 String 데이터를 연결한다. */
             Title?.text = challenge.title
-            Remain?.text =challenge.RemainDate
-            Term?.text = challenge.term
+            Remain?.text =challenge.description
+            Term?.text = challenge.category
 
         }
     }
