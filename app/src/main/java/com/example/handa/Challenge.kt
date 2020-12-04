@@ -1,6 +1,10 @@
 package com.example.handa
 
+import android.net.Uri
 
-data class Challenge(val title:String, val description:String, val category:String,
-                     val photo:String, val part_people:String, val part_money:String)
+
+class Challenge(
+    val Category:String, val title:String, val RemainDate:String, val term:String,
+    val photo: Uri?
+)
 

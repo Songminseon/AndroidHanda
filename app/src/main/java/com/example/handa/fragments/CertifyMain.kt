@@ -1,6 +1,5 @@
 package com.example.handa.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,10 +13,21 @@ import com.example.handa.R
 import com.example.handa.databinding.CertifyMainBinding
 import kotlinx.android.synthetic.main.challenge_list.*
 
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.handa.*
+import kotlinx.android.synthetic.main.certify_main.*
+
 
 class CertifyMain : Fragment() {
-
-
+    var certifylist = arrayListOf<Certify>(
+        Certify("Title", "3days", 10.2, "practice"),
+        Certify("Title", "3days", 10.2, "practice"),
+        Certify("Title", "3days", 10.2, "practice"),
+        Certify("Title", "3days", 10.2, "practice"),
+        Certify("Title", "3days", 10.2, "practice"),
+        Certify("Title", "3days", 10.2, "practice"),
+        Certify("Title", "3days", 10.2, "practice")
+    )
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -25,10 +35,15 @@ class CertifyMain : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
 
-        val binding = DataBindingUtil.inflate<CertifyMainBinding>(inflater,
-        R.layout.certify_main, container, false)
+        return inflater.inflate(R.layout.certify_main, container, false)
+    }
 
-
-    return binding.root
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val mAdapter = CertifyAdapter(requireContext(), certifylist)
+        certifyList.adapter = mAdapter
+        val lm = LinearLayoutManager(requireContext())
+        certifyList.layoutManager=lm
+        certifyList.setHasFixedSize(true)
     }
 }
