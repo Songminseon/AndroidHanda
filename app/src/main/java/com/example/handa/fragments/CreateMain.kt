@@ -35,14 +35,7 @@ class CreateMain : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        total_list.addAll(Cat.category_s)
-        total_list.addAll(Cat.category_d)
-        total_list.addAll(Cat.category_h)
-        total_list.addAll(Cat.category_m)
-        total_list.addAll(Cat.category_l)
-        total_list.addAll(Cat.category_r)
-        binding= DataBindingUtil.inflate(inflater, R.layout.create_main, container, false)
-        mStorageRef = FirebaseStorage.getInstance().reference
+        val binding= DataBindingUtil.inflate<CreateMainBinding>(inflater, R.layout.create_main, container, false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -50,7 +43,6 @@ class CreateMain : Fragment() {
         view.createButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_CreateMain_to_createFirst)
         }
-
         val lm = GridLayoutManager(requireContext(), 2)
         challenge_recyclerView2.layoutManager = lm
 
@@ -68,7 +60,7 @@ class CreateMain : Fragment() {
                     val part_money:String = snapshot?.child("challenge").child(keyName).child("part_money").value.toString()
                     val part_people:String = snapshot?.child("challenge").child(keyName).child("part_people").value.toString()
                     val category:String = snapshot?.child("challenge").child(keyName).child("category").value.toString()
-                    challengeList.add(Challenge(title, description, category, "practice", part_money, part_people))
+
                 }
 
 
@@ -78,7 +70,7 @@ class CreateMain : Fragment() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                println("akakslak")
+                 println("akakslak")
             }
         })
     }
