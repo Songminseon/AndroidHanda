@@ -28,7 +28,7 @@
         </activity>
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.handa.fileprovider"
+            android:authorities="com.example.handa.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

@@ -36,13 +36,13 @@ class FinishChallenge : AppCompatActivity() {
     lateinit var currentPhotoPath : String
 
     var finishlist = arrayListOf<Finish>(
-        Finish("practice", "Happay"),
-        Finish("practice", "Happay"),
-        Finish("practice", "Happay"),
-        Finish("practice", "Happay"),
-        Finish("practice", "Happay"),
-        Finish("practice", "Happay"),
-        Finish("practice", "Happay")
+        Finish("logo", "Happay"),
+        Finish("logo", "Happay"),
+        Finish("logo", "Happay"),
+        Finish("logo", "Happay"),
+        Finish("logo", "Happay"),
+        Finish("logo", "Happay"),
+        Finish("logo", "Happay")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -60,147 +60,123 @@ class LoginActivity : AppCompatActivity() {
                                 data.addValueEventListener(object : ValueEventListener {
                                     override fun onDataChange(snapshot: DataSnapshot) {
                                         for (ch in snapshot.children) {
-                                            if (ch.child("category").value.toString() == "diet") {
-                                                val image = ch.child("image").value.toString()
-                                                val mountainRef = mStorageRef!!.child("publicDiet/$image").downloadUrl
-                                                        .addOnSuccessListener { imageURL = it }
-                                                        .addOnFailureListener {}
+                                            if (ch.child("cat").value.toString() == "diet") {
                                                 Cat.category_d.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                                 Cat.category_t.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                             }
-                                            if (ch.child("category").value.toString() == "study") {
-                                                val image = ch.child("image").value.toString()
-                                                val mountainRef = mStorageRef!!.child("publicStudy/$image").downloadUrl
-                                                        .addOnSuccessListener { imageURL = it }
-                                                        .addOnFailureListener {}
+                                            if (ch.child("cat").value.toString() == "study") {
                                                 Cat.category_s.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                                 Cat.category_t.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                             }
-                                            if (ch.child("category").value.toString() == "hobby") {
-                                                val image = ch.child("image").value.toString()
-                                                val mountainRef = mStorageRef!!.child("publicHobby/$image").downloadUrl
-                                                        .addOnSuccessListener { imageURL = it }
-                                                        .addOnFailureListener {}
+                                            if (ch.child("cat").value.toString() == "hobby") {
                                                 Cat.category_h.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                                 Cat.category_t.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                             }
-                                            if (ch.child("category").value.toString() == "money") {
-                                                val image = ch.child("image").value.toString()
-                                                val mountainRef = mStorageRef!!.child("publicMoney/$image").downloadUrl
-                                                        .addOnSuccessListener { imageURL = it }
-                                                        .addOnFailureListener {}
+                                            if (ch.child("cat").value.toString() == "money") {
                                                 Cat.category_m.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                                 Cat.category_t.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                             }
-                                            if (ch.child("category").value.toString() == "language") {
-                                                val image = ch.child("image").value.toString()
-                                                val mountainRef = mStorageRef!!.child("publicLanguage/$image").downloadUrl
-                                                        .addOnSuccessListener { imageURL = it }
-                                                        .addOnFailureListener {}
+                                            if (ch.child("cat").value.toString() == "language") {
                                                 Cat.category_l.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                                 Cat.category_t.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                             }
-                                            if (ch.child("category").value.toString() == "routine") {
-                                                val image = ch.child("image").value.toString()
-                                                val mountainRef = mStorageRef!!.child("publicDaily/$image").downloadUrl
-                                                        .addOnSuccessListener { imageURL = it }
-                                                        .addOnFailureListener {}
+                                            if (ch.child("cat").value.toString() == "routine") {
                                                 Cat.category_r.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                                 Cat.category_t.add(
                                                         Challenge(
-                                                                ch.child("category").value.toString(),
+                                                                ch.child("cat").value.toString(),
                                                                 ch.child("title").value.toString(),
                                                                 ch.child("remain").value.toString(),
                                                                 ch.child("term").value.toString(),
-                                                                imageURL
+                                                                ch.child("rep").value.toString()
                                                         )
                                                 )
                                             }
@@ -218,16 +194,13 @@ class LoginActivity : AppCompatActivity() {
                                         for (ch in snapshot.children) {
                                             if (user!!.uid == ch.key.toString()) {
                                                 for (li in ch.children) {
-                                                    val image = li.child("img_uri").value.toString()
-                                                    val mountainRef = mStorageRef!!.child("publicDiet/$image").downloadUrl
-                                                            .addOnSuccessListener { imageURL = it }
-                                                            .addOnFailureListener {}
+                                                    val image = li.child("rep").value.toString()
                                                     Cer.user_list.add(
                                                             Certify(
                                                                     li.child("title").value.toString(),
                                                                     li.child("remain").value.toString(),
                                                                     li.child("rate").value.toString(),
-                                                                    imageURL
+                                                                    li.child("rep").value.toString()
                                                             )
                                                     )
                                                 }
@@ -239,7 +212,6 @@ class LoginActivity : AppCompatActivity() {
                                     }
 
                                 })
-
 
                                 val intent = Intent(this, MainActivity::class.java)
                                 startActivity(intent)

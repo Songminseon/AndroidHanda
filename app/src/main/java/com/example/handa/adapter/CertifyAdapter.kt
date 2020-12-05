@@ -2,7 +2,10 @@ package com.example.handa.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.provider.MediaStore
+import android.util.Base64
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,9 +13,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.handa.dataclass.Certify
 import com.example.handa.FinishChallenge
 import com.example.handa.R
+import com.example.handa.dataclass.Certify
 
 
 class CertifyAdapter(val context: Context, val certifyList: ArrayList<Certify>) :
@@ -45,10 +48,7 @@ class CertifyAdapter(val context: Context, val certifyList: ArrayList<Certify>) 
             /* dogPhoto의 setImageResource에 들어갈 이미지의 id를 파일명(String)으로 찾고,
             이미지가 없는 경우 안드로이드 기본 아이콘을 표시한다.*/
             if (certify.c_image !=null) {
-                val bitmap= MediaStore.Images.Media.getBitmap(
-                    context.contentResolver,
-                    certify.c_image
-                )
+                val bitmap= StringToBitmap(certify.c_image)
                 Photo!!.setImageBitmap(bitmap)
             } else {
                 Photo?.setImageResource(R.mipmap.ic_launcher)
@@ -56,9 +56,20 @@ class CertifyAdapter(val context: Context, val certifyList: ArrayList<Certify>) 
             /* 나머지 TextView와 String 데이터를 연결한다. */
             Title?.text = certify.c_title
             Remain?.text =certify.c_remain
-            Rate?.text = certify.c_rate.toString()
+            Rate?.text = certify.c_rate
+        }
+        fun StringToBitmap(encodedString: String?): Bitmap? {
+            return try {
+                val encodeByte: ByteArray = Base64.decode(encodedString, Base64.DEFAULT)
+                BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.size)
+            } catch (e: Exception) {
+                e.message
+                null
+            }
         }
     }
+
+
 
 
 }

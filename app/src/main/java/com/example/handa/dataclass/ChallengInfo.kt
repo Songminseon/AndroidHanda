@@ -5,9 +5,10 @@ import com.google.firebase.firestore.IgnoreExtraProperties
 
 
 @IgnoreExtraProperties
-data class ChallengInfo(
+data class C_post(
         var title: String? = "",
         var term: Int = 0,
+        var remain: Int=0,
         var fee: Int = 0,
         var desc : String?="",
         var auth : String?="",
@@ -24,6 +25,7 @@ data class ChallengInfo(
         return mapOf(
                 "title" to title,
                 "term" to term,
+                "reamin" to remain,
                 "fee" to fee,
                 "desc" to desc,
                 "auth" to auth,

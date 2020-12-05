@@ -13,10 +13,6 @@ import com.example.handa.R
 
 import com.example.handa.`object`.Cat
 import com.example.handa.databinding.CreateMainBinding
-import com.example.handa.dataclass.ChallengInfo
-import com.example.handa.dataclass.Post
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
 
 import kotlinx.android.synthetic.main.create_main.*
 import kotlinx.android.synthetic.main.create_main.view.*
@@ -44,8 +40,6 @@ class CreateMain : Fragment() {
 
         view.createButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_CreateMain_to_createFirst)
-
-
         }
 
     }

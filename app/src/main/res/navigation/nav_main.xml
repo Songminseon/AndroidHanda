@@ -76,5 +76,9 @@
         android:id="@+id/createFourth"
         android:name="com.example.handa.fragments.CreateFourth"
         android:label="create_fourth"
-        tools:layout="@layout/create_fourth" />
+        tools:layout="@layout/create_fourth" >
+        <action
+            android:id="@+id/action_createFourth_to_CreateMain"
+            app:destination="@id/CreateMain" />
+    </fragment>
 </navigation>

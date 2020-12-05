@@ -2,7 +2,10 @@ package com.example.handa.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.provider.MediaStore
+import android.util.Base64
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,10 +50,7 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
             /* dogPhoto의 setImageResource에 들어갈 이미지의 id를 파일명(String)으로 찾고,
             이미지가 없는 경우 안드로이드 기본 아이콘을 표시한다.*/
             if (challenge.photo !=null) {
-                val bitmap= MediaStore.Images.Media.getBitmap(
-                    context.contentResolver,
-                    challenge.photo
-                )
+                val bitmap= StringToBitmap(challenge.photo)
                 Photo!!.setImageBitmap(bitmap)
             } else {
                 Photo?.setImageResource(R.mipmap.ic_launcher)
@@ -62,12 +62,13 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
 
         }
     }
-    fun clear() {
-        challengeList.clear()
+    fun StringToBitmap(encodedString: String?): Bitmap? {
+        return try {
+            val encodeByte: ByteArray = Base64.decode(encodedString, Base64.DEFAULT)
+            BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.size)
+        } catch (e: Exception) {
+            e.message
+            null
+        }
     }
-    fun addItem(challenge: Challenge){
-        challengeList.add(challenge)
-        notifyDataSetChanged()
-    }
-
 }
