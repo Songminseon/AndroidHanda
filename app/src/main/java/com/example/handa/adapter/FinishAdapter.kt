@@ -1,16 +1,14 @@
-package com.example.handa
+package com.example.handa.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.handa.dataclass.Finish
+import com.example.handa.R
 
 
 class FinishAdapter(val context: Context, val finishList: ArrayList<Finish>) :

@@ -1,6 +1,5 @@
 package com.example.handa.fragments
 
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,12 +8,15 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.handa.Challenge
-import com.example.handa.ChallengeAdapter
+import com.example.handa.adapter.ChallengeAdapter
 import com.example.handa.R
 
-import com.example.handa.*
+import com.example.handa.`object`.Cat
 import com.example.handa.databinding.CreateMainBinding
+import com.example.handa.dataclass.ChallengInfo
+import com.example.handa.dataclass.Post
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 import kotlinx.android.synthetic.main.create_main.*
 import kotlinx.android.synthetic.main.create_main.view.*
@@ -42,9 +44,14 @@ class CreateMain : Fragment() {
 
         view.createButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_CreateMain_to_createFirst)
+
+
         }
 
     }
+
+
+
 }
 
 

@@ -1,4 +1,4 @@
-package com.example.handa
+package com.example.handa.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -10,6 +10,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.handa.dataclass.Certify
+import com.example.handa.FinishChallenge
+import com.example.handa.R
 
 
 class CertifyAdapter(val context: Context, val certifyList: ArrayList<Certify>) :

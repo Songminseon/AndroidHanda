@@ -4,17 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import com.example.handa.Challenge
-import com.example.handa.ChallengeAdapter
 import com.example.handa.R
-import com.example.handa.databinding.CertifyMainBinding
-import kotlinx.android.synthetic.main.challenge_list.*
 
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.handa.*
+import com.example.handa.`object`.Cer
+import com.example.handa.adapter.CertifyAdapter
 import kotlinx.android.synthetic.main.certify_main.*
 
 

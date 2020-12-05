@@ -6,7 +6,7 @@
     <data>
         <variable
             name="cat"
-            type="com.example.handa.Category"/>
+            type="com.example.handa.dataclass.Category"/>
     </data>
 
     <LinearLayout
@@ -19,7 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="12">
-            <Toolbar
+
+            <androidx.appcompat.widget.Toolbar
                 android:id="@+id/tb_category"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -31,7 +32,7 @@
                     android:layout_gravity="center"
                     android:textSize="20dp"
                     android:text="@{cat.Cat_sel}"/>
-            </Toolbar>
+            </androidx.appcompat.widget.Toolbar>
 
         </LinearLayout>
 

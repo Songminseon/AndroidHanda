@@ -1,4 +1,6 @@
-package com.example.handa
+package com.example.handa.`object`
+
+import com.example.handa.dataclass.Challenge
 
 object Cat {
     var cat:String =""

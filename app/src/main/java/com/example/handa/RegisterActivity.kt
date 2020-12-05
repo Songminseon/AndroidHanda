@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.handa.dataclass.Post
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -44,8 +45,6 @@ class RegisterActivity: AppCompatActivity(){
                             val info = data.toMap()
 
                             DatabaseReference.child("userDB").child(user?.uid.toString()).setValue(info)
-                            DatabaseReference.child("certify").child(user?.uid.toString()).setValue(0)
-
                             finish()
                         } else {
                             // If sign in fails, display a message to the user.

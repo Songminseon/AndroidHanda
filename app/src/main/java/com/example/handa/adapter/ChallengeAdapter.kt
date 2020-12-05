@@ -1,9 +1,8 @@
-package com.example.handa
+package com.example.handa.adapter
 
 import android.content.Context
 import android.content.Intent
 import android.provider.MediaStore
-import android.text.method.TextKeyListener.clear
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.handa.fragments.ChallengeList
+import com.example.handa.dataclass.Challenge
+import com.example.handa.ChallengeDetail
+import com.example.handa.R
 
 
 class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challenge>) :
@@ -31,6 +32,7 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
         holder.itemView.setOnClickListener{
             val intent = Intent(holder.itemView.context, ChallengeDetail::class.java)
             startActivity(holder.itemView.context, intent, null)
+            notifyDataSetChanged()
         }
     }
 
@@ -63,7 +65,7 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
     fun clear() {
         challengeList.clear()
     }
-    fun addItem(challenge:Challenge){
+    fun addItem(challenge: Challenge){
         challengeList.add(challenge)
         notifyDataSetChanged()
     }

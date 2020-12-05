@@ -1,4 +1,4 @@
-package com.example.handa
+package com.example.handa.dataclass
 
 import android.net.Uri
 

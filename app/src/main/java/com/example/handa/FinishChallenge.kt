@@ -16,9 +16,10 @@ import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.FileProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.handa.adapter.FinishAdapter
+import com.example.handa.dataclass.Finish
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.gun0912.tedpermission.PermissionListener

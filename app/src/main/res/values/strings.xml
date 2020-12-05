@@ -20,4 +20,13 @@
     <string name="ex_1000">Ex ) 1000</string>
     <string name="please_register_the_representative_photo">Please register the representative photo.</string>
     <string name="achieve_rate">achieve rate</string>
+    <string name="diet">Diet</string>
+    <string name="study">Study</string>
+    <string name="lifestyle">Lifestyle</string>
+    <string name="hobby">Hobby</string>
+    <string name="language">Language</string>
+    <string name="money">Money</string>
+    <string name="certify_date_water_cup_and_vitamin_using_photo">Certify date, water cup, and vitamin using photo.</string>
+    <string name="upload_challenge_representative_photograph">Upload Challenge Representative Photograph</string>
+    <string name="create_challenge">Create Challenge</string>
 </resources>
