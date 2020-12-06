@@ -1,5 +1,6 @@
 package com.example.handa
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -41,10 +42,11 @@ class RegisterActivity: AppCompatActivity(){
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success")
                             val user = auth.currentUser
-                            val data = Post(name.text.toString(),point=0)
+                            val data = Post(name.text.toString(),point=0,money=0)
                             val info = data.toMap()
-
                             DatabaseReference.child("userDB").child(user?.uid.toString()).setValue(info)
+                            val intent = Intent(this, LoginActivity::class.java)
+                            startActivity(intent)
                             finish()
                         } else {
                             // If sign in fails, display a message to the user.

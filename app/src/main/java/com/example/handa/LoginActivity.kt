@@ -42,8 +42,6 @@ class LoginActivity : AppCompatActivity() {
             mStorageRef = FirebaseStorage.getInstance().reference
             val user = auth.currentUser
 
-            val data = database.getReference("challenge")
-            val data_c = database.getReference("certify")
 
             if (email.text.toString().isEmpty() || pd.text.toString().isEmpty()) {
                 Toast.makeText(this, "email 혹은 password를 반드시 입력하세요.", Toast.LENGTH_SHORT).show()
@@ -53,162 +51,149 @@ class LoginActivity : AppCompatActivity() {
                             if (task.isSuccessful) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d(TAG, "signInWithEmail:success")
-                                val data = database.getReference("challenge")
-                                val data_c = database.getReference("certify")
-
+                                val data = database.getReference("userChallenge")
 
                                 data.addValueEventListener(object : ValueEventListener {
                                     override fun onDataChange(snapshot: DataSnapshot) {
                                         for (ch in snapshot.children) {
-                                            if (ch.child("cat").value.toString() == "diet") {
-                                                Cat.category_d.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                                Cat.category_t.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                            }
-                                            if (ch.child("cat").value.toString() == "study") {
-                                                Cat.category_s.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                                Cat.category_t.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                            }
-                                            if (ch.child("cat").value.toString() == "hobby") {
-                                                Cat.category_h.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                                Cat.category_t.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                            }
-                                            if (ch.child("cat").value.toString() == "money") {
-                                                Cat.category_m.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                                Cat.category_t.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                            }
-                                            if (ch.child("cat").value.toString() == "language") {
-                                                Cat.category_l.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                                Cat.category_t.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                            }
-                                            if (ch.child("cat").value.toString() == "routine") {
-                                                Cat.category_r.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                                Cat.category_t.add(
-                                                        Challenge(
-                                                                ch.child("cat").value.toString(),
-                                                                ch.child("title").value.toString(),
-                                                                ch.child("remain").value.toString(),
-                                                                ch.child("term").value.toString(),
-                                                                ch.child("rep").value.toString()
-                                                        )
-                                                )
-                                            }
-                                        }
-                                    }
-
-                                    override fun onCancelled(error: DatabaseError) {
-                                        TODO("Not yet implemented")
-                                    }
-
-                                })
-
-                                data_c.addValueEventListener(object : ValueEventListener {
-                                    override fun onDataChange(snapshot: DataSnapshot) {
-                                        for (ch in snapshot.children) {
-                                            if (user!!.uid == ch.key.toString()) {
-                                                for (li in ch.children) {
-                                                    val image = li.child("rep").value.toString()
+                                            for (i in ch.children) {
+                                                if (ch.key.toString() == user!!.uid) {
                                                     Cer.user_list.add(
-                                                            Certify(
-                                                                    li.child("title").value.toString(),
-                                                                    li.child("remain").value.toString(),
-                                                                    li.child("rate").value.toString(),
-                                                                    li.child("rep").value.toString()
+                                                            Certify(i.child("title").value.toString(),
+                                                                    i.child("cat").value.toString(),
+                                                                    i.child("remain").value.toString(),
+                                                                    i.child("rep").value.toString(),
                                                             )
                                                     )
+                                                }
+                                                else{
+                                                    if (i.child("cat").value.toString() == "diet") {
+                                                        Cat.category_d.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                        Cat.category_t.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                    }
+                                                    if (i.child("cat").value.toString() == "study") {
+                                                        Cat.category_s.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                        Cat.category_t.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                    }
+                                                    if (i.child("cat").value.toString() == "hobby") {
+                                                        Cat.category_h.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                        Cat.category_t.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                    }
+                                                    if (i.child("cat").value.toString() == "money") {
+                                                        Cat.category_m.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                        Cat.category_t.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                    }
+                                                    if (i.child("cat").value.toString() == "language") {
+                                                        Cat.category_l.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                        Cat.category_t.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                    }
+                                                    if (i.child("cat").value.toString() == "lifestyle") {
+                                                        Cat.category_r.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                        Cat.category_t.add(
+                                                                Challenge(
+                                                                        i.child("cat").value.toString(),
+                                                                        i.child("title").value.toString(),
+                                                                        i.child("remain").value.toString(),
+                                                                        i.child("term").value.toString(),
+                                                                        i.child("rep").value.toString()
+                                                                )
+                                                        )
+                                                    }
                                                 }
                                             }
                                         }
                                     }
 
                                     override fun onCancelled(error: DatabaseError) {
+                                        TODO("Not yet implemented")
                                     }
 
                                 })

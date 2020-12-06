@@ -26,30 +26,30 @@ class ChallengeMain : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.button_diet.setOnClickListener {
-            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
             Cat.cat="diet"
+            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
         }
         view.button_study.setOnClickListener {
-            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
             Cat.cat="study"
+            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
         }
         view.button_lang.setOnClickListener {
-            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
             Cat.cat="language"
+            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
 
         }
         view.button_hobby.setOnClickListener {
-            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
             Cat.cat="hobby"
+            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
         }
         view.button_money.setOnClickListener {
-            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
             Cat.cat="money"
+            view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
 
         }
         view.button_pattern.setOnClickListener {
+            Cat.cat="lifestyle"
             view.findNavController().navigate(R.id.action_ChallengeMain_to_challengeList)
-            Cat.cat="routine"
 
         }
 

@@ -29,4 +29,5 @@
     <string name="certify_date_water_cup_and_vitamin_using_photo">Certify date, water cup, and vitamin using photo.</string>
     <string name="upload_challenge_representative_photograph">Upload Challenge Representative Photograph</string>
     <string name="create_challenge">Create Challenge</string>
+    <string name="total_fee">total fee :</string>
 </resources>

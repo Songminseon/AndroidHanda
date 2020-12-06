@@ -41,8 +41,8 @@ class CertifyAdapter(val context: Context, val certifyList: ArrayList<Certify>) 
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val Photo = itemView?.findViewById<ImageView>(R.id.c_image)
         val Title = itemView?.findViewById<TextView>(R.id.c_title)
+        val cat= itemView?.findViewById<TextView>(R.id.c_category)
         val Remain = itemView?.findViewById<TextView>(R.id.c_remain)
-        val Rate = itemView?.findViewById<TextView>(R.id.c_rate)
 
         fun bind(certify: Certify, context: Context) {
             /* dogPhoto의 setImageResource에 들어갈 이미지의 id를 파일명(String)으로 찾고,
@@ -55,8 +55,8 @@ class CertifyAdapter(val context: Context, val certifyList: ArrayList<Certify>) 
             }
             /* 나머지 TextView와 String 데이터를 연결한다. */
             Title?.text = certify.c_title
+            cat?.text=certify.c_cat
             Remain?.text =certify.c_remain
-            Rate?.text = certify.c_rate
         }
         fun StringToBitmap(encodedString: String?): Bitmap? {
             return try {

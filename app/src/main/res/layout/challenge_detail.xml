@@ -21,67 +21,195 @@
                 android:background="@drawable/list_border">
 
                 <ImageView
+                    android:id="@+id/d_image"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:src="@drawable/practice2"
-                    android:contentDescription="TODO"></ImageView>
+                    android:layout_height="200dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/practice2"></ImageView>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/border"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Title :"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/d_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Title"
+                            android:textSize="20dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Category"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/d_cat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Category"
+                            android:textSize="20dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Term :"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/d_term"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Term"
+
+                            android:textSize="20dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="participant Fee :"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/d_fee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="participant Fee"
+                            android:textSize="20dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Number of Person :"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/d_TotalM"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="person"
+                            android:textSize="20dp"></TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_fee"
+                            android:textSize="20dp"></TextView>
                     <TextView
+                        android:id="@+id/d_TotalF"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:autoSizeTextType="uniform"
-                        android:background="@drawable/list_border"
-                        android:text="Title"></TextView>
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="total_fee"
+                        android:textSize="20dp"></TextView>
                 </LinearLayout>
-
+            </LinearLayout>
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
                         android:autoSizeTextType="uniform"
-                        android:background="@drawable/list_border"
+                        android:text="Description :"></TextView>
+
+                    <TextView
+                        android:id="@+id/d_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20dp"
                         android:text="Description"></TextView>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Explain Rule :"></TextView>
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="110dp"
-                        android:autoSizeTextType="uniform"
-                        android:background="@drawable/list_border"
+                        android:id="@+id/d_auth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20dp"
                         android:text="Explain Rule"></TextView>
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="bottom|center_horizontal"
                 android:layout_weight="1">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:autoSizeTextType="uniform"
-                    android:layout_gravity="center"
 
-                    android:src="@drawable/logo">
-                </ImageView>
+                <Button
+                    android:id="@+id/d_pat"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Button" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

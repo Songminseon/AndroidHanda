@@ -44,8 +44,9 @@ class ChallengeList: Fragment(){
             "hobby" -> mAdapter = ChallengeAdapter(requireContext(), Cat.category_h)
             "money" -> mAdapter = ChallengeAdapter(requireContext(), Cat.category_m)
             "language" -> mAdapter = ChallengeAdapter(requireContext(), Cat.category_l)
-            "routine" -> mAdapter = ChallengeAdapter(requireContext(), Cat.category_r)
+            "lifestyle" -> mAdapter = ChallengeAdapter(requireContext(), Cat.category_r)
         }
+
         challenge_recyclerView1.adapter = mAdapter
         val lm = GridLayoutManager(requireContext(), 2)
         challenge_recyclerView1.layoutManager = lm

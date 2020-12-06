@@ -34,6 +34,7 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
         holder.bind(challengeList[position], context)
         holder.itemView.setOnClickListener{
             val intent = Intent(holder.itemView.context, ChallengeDetail::class.java)
+            intent.putExtra("item", challengeList[position].title)
             startActivity(holder.itemView.context, intent, null)
             notifyDataSetChanged()
         }
@@ -41,6 +42,7 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
 
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val Photo = itemView?.findViewById<ImageView>(R.id.PhotoImg)
+        val Cat = itemView?.findViewById<TextView>(R.id.category)
         val Title = itemView?.findViewById<TextView>(R.id.Title)
         val Remain = itemView?.findViewById<TextView>(R.id.Remain)
         val Term = itemView?.findViewById<TextView>(R.id.Term)
@@ -57,6 +59,7 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
             }
             /* 나머지 TextView와 String 데이터를 연결한다. */
             Title?.text = challenge.title
+            Cat?.text=challenge.Category
             Remain?.text =challenge.RemainDate
             Term?.text = challenge.term
 
