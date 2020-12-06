@@ -20,6 +20,7 @@
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".ChallengeDetail"/>
         <activity android:name=".FinishChallenge"/>
+        <activity android:name=".FinishChallengeSecond"/>
         <activity android:name=".LoginActivity">
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
