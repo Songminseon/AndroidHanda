@@ -48,6 +48,7 @@ class FinishChallenge : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.finish_challenge)
+
         val mAdapter = FinishAdapter(this, finishlist)
         f_list.adapter = mAdapter
         val lm = GridLayoutManager(this,2)

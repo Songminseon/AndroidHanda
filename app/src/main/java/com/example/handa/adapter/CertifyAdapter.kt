@@ -13,6 +13,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.handa.ChallengeDetail
 import com.example.handa.FinishChallenge
 import com.example.handa.R
 import com.example.handa.dataclass.Certify
@@ -34,8 +35,11 @@ class CertifyAdapter(val context: Context, val certifyList: ArrayList<Certify>) 
         holder.bind(certifyList[position], context)
         holder.itemView.setOnClickListener{
             val intent = Intent(holder.itemView.context, FinishChallenge::class.java)
+            intent.putExtra("item", certifyList[position].c_title)
             ContextCompat.startActivity(holder.itemView.context, intent, null)
+            notifyDataSetChanged()
         }
+
     }
 
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {

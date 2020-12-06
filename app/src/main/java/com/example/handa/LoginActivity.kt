@@ -195,9 +195,7 @@ class LoginActivity : AppCompatActivity() {
                                     override fun onCancelled(error: DatabaseError) {
                                         TODO("Not yet implemented")
                                     }
-
                                 })
-
                                 val intent = Intent(this, MainActivity::class.java)
                                 startActivity(intent)
                                 finish()

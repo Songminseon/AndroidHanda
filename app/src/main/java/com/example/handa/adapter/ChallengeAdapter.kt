@@ -38,6 +38,7 @@ class ChallengeAdapter(val context: Context, val challengeList: ArrayList<Challe
             startActivity(holder.itemView.context, intent, null)
             notifyDataSetChanged()
         }
+
     }
 
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {

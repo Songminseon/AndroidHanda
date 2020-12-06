@@ -9,8 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.handa.R
 import com.example.handa.`object`.Cat
+import com.example.handa.`object`.Cer
 import com.example.handa.`object`.CreateC
 import com.example.handa.dataclass.C_post
+import com.example.handa.dataclass.Certify
 import com.example.handa.dataclass.Challenge
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -92,6 +94,14 @@ class CreateFourth : Fragment() {
                             CreateC.rep
                     )
             )
+            Cer.user_list.add(
+                    Certify(
+                            CreateC.title,
+                            CreateC.cat,
+                            CreateC.term.toString(),
+                            CreateC.rep
+                    )
+            )
 
         }
         if(CreateC.cat=="study"){
@@ -113,6 +123,14 @@ class CreateFourth : Fragment() {
                             CreateC.rep
                     )
             )
+            Cer.user_list.add(
+                    Certify(
+                            CreateC.title,
+                            CreateC.cat,
+                            CreateC.term.toString(),
+                            CreateC.rep
+                    )
+            )
 
         }
         if(CreateC.cat=="lifestyle"){
@@ -130,6 +148,14 @@ class CreateFourth : Fragment() {
                             CreateC.cat,
                             CreateC.title,
                             CreateC.term.toString(),
+                            CreateC.term.toString(),
+                            CreateC.rep
+                    )
+            )
+            Cer.user_list.add(
+                    Certify(
+                            CreateC.title,
+                            CreateC.cat,
                             CreateC.term.toString(),
                             CreateC.rep
                     )
@@ -156,6 +182,14 @@ class CreateFourth : Fragment() {
                             CreateC.rep
                     )
             )
+            Cer.user_list.add(
+                    Certify(
+                            CreateC.title,
+                            CreateC.cat,
+                            CreateC.term.toString(),
+                            CreateC.rep
+                    )
+            )
         }
             if(CreateC.cat=="language"){
                 Cat.category_l.add(
@@ -172,6 +206,14 @@ class CreateFourth : Fragment() {
                                 CreateC.cat,
                                 CreateC.title,
                                 CreateC.term.toString(),
+                                CreateC.term.toString(),
+                                CreateC.rep
+                        )
+                )
+                Cer.user_list.add(
+                        Certify(
+                                CreateC.title,
+                                CreateC.cat,
                                 CreateC.term.toString(),
                                 CreateC.rep
                         )
@@ -194,6 +236,14 @@ class CreateFourth : Fragment() {
                                 CreateC.cat,
                                 CreateC.title,
                                 CreateC.term.toString(),
+                                CreateC.term.toString(),
+                                CreateC.rep
+                        )
+                )
+                Cer.user_list.add(
+                        Certify(
+                                CreateC.title,
+                                CreateC.cat,
                                 CreateC.term.toString(),
                                 CreateC.rep
                         )

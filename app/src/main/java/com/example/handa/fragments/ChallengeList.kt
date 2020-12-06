@@ -27,16 +27,14 @@ class ChallengeList: Fragment(){
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-
         binding= DataBindingUtil.inflate(inflater, R.layout.challenge_list, container, false)
-        binding.cat= Category(Cat.cat)
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.cat.text= Cat.cat
 
         when(Cat.cat){
             "diet" -> mAdapter = ChallengeAdapter(requireContext(), Cat.category_d)
